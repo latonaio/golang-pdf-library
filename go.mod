@@ -1,4 +1,4 @@
-module github.com/latonaio/rabbitmq-golang-client-for-data-platform
+module github.com/latonaio/golang-pdf-library
 
 go 1.20
 
