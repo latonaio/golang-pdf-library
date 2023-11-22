@@ -1,6 +1,6 @@
-module pdf
+module github.com/latonaio/rabbitmq-golang-client-for-data-platform
 
-go 1.21.3
+go 1.20
 
 require (
 	github.com/digitorus/pdf v0.1.2 // indirect
