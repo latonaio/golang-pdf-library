@@ -1,4 +1,4 @@
-module latona-pdf
+module github.com/latonaio/golang-pdf-library
 
 go 1.20
 
@@ -17,5 +17,3 @@ require (
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 )
-
-replace latona-pdf => github.com/latonaio/golang-pdf-library v1.0.5

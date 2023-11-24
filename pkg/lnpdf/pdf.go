@@ -1,9 +1,10 @@
 package lnpdf
 
 import (
-	constant "latona-pdf/pkg/lnpdf/constants"
 	"math"
 	"strings"
+
+	constant "github.com/latonaio/golang-pdf-library/pkg/lnpdf/constants"
 
 	"github.com/signintech/gopdf"
 )

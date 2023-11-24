@@ -4,9 +4,10 @@ import (
 	"crypto"
 	"crypto/x509"
 	"encoding/pem"
-	"latona-pdf/pkg/lnpdf/utils"
 	"os"
 	"time"
+
+	"github.com/latonaio/golang-pdf-library/pkg/lnpdf/utils"
 
 	pdfsign "github.com/digitorus/pdfsign/sign"
 )

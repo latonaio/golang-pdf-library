@@ -2,10 +2,11 @@ package lnpdf
 
 import (
 	"encoding/json"
-	model "latona-pdf/pkg/lnpdf/models"
 	"os"
 	"path/filepath"
 	"strings"
+
+	model "github.com/latonaio/golang-pdf-library/pkg/lnpdf/models"
 
 	"github.com/signintech/gopdf"
 )

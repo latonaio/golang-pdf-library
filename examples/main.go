@@ -2,8 +2,9 @@ package main
 
 import (
 	"flag"
-	"latona-pdf/pkg/lnpdf"
-	"latona-pdf/pkg/lnpdf/utils"
+
+	"github.com/latonaio/golang-pdf-library/pkg/lnpdf"
+	"github.com/latonaio/golang-pdf-library/pkg/lnpdf/utils"
 )
 
 func main() {
