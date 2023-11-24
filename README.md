@@ -1,9 +1,5 @@
 # README #
 
-## TODO
-- apply godoc
-- path ../
-
 ## Specifications
 
 - data.jsonの値は文字列のみ(数値は不可、フォーマットした文字列)

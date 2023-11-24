@@ -1,0 +1,152 @@
+{
+    "customer" : "Mill cert sample customer",
+    "orderNo" : "o#999",
+    "drawingNo" : "d#8888",
+    "purchaceOrderNo" : "po#00000000000",
+    "mfgNo" : "A0730010",
+    "markingOfMaterial" : "SFVC 2A",
+    "product" : "150LB SO-RF",
+    "size" : "10B",
+    "quantity" : "5",
+    "certificateNo" : "A0730010",
+    "date" : "2023/10/26",
+    "specificationForInspection" : "JIS XXXXXXXX",
+    "standardOfRawMaterial" : "JIS G 3202-1988 SFVC 2A",
+    "rawMaterialMaker" : "Sample Maker",
+    "heatNo" : "14E100525",
+    "mechanicalProperties" : [
+        {
+            "labelEn" : "Yield Strength",
+            "label" : "耐力",
+            "unit" : "N/m ㎡",
+            "min" : "245",
+            "heatNo" : "295"
+        },
+        {
+            "labelEn" : "Tensile Strength",
+            "label" : "引張強さ",
+            "unit" : "N/m ㎡",
+            "max" : "640",
+            "min" : "490",
+            "heatNo" : "525"
+        },
+        {
+            "labelEn" : "Elongation",
+            "label" : "伸び",
+            "unit" : "%",
+            "min" : "18",
+            "heatNo" : "30"
+        },
+        {
+            "labelEn" : "Reduction of Area",
+            "label" : "絞り",
+            "unit" : "%",
+            "max" : "85",
+            "min" : "33",
+            "heatNo" : "65"
+        },
+        {
+            "labelEn" : "Hardness",
+            "label" : "硬さ",
+            "unit" : "HB",
+            "heatNo" : "145"
+        }
+    ],
+    "chemicalCompositions" : [
+        {
+            "label" : "C",
+            "max" : "0.350",
+            "heatNo" : "0.190"
+        },
+        {
+            "label" : "Si",
+            "max" : "0.350",
+            "heatNo" : "0.28"
+        },
+        {
+            "label" : "Mn",
+            "max" : "1.100",
+            "min" : "0.400",
+            "heatNo" : "0.98"
+        },
+        {
+            "label" : "P",
+            "max" : "0.030",
+            "heatNo" : "0.120"
+        },
+        {
+            "label" : "S",
+            "max" : "0.030",
+            "heatNo" : "0.001"
+        },
+        {
+            "label" : "Ni"
+        },
+        {
+            "label" : "Cr"
+        },
+        {
+            "label" : "Mo"
+        },
+        {
+            "label" : "Cu"
+        },
+        {
+            "label" : "V"
+        },
+        {
+            "label" : "Co"
+        }
+    ],
+    "specifications" : [
+        {
+            "labelEn" : "Raw material",
+            "label" : "素材寸法",
+            "value1" : "130*8250"
+        },
+        {
+            "labelEn" : "Visual Inspection",
+            "label" : "外観調査",
+            "value1" : "GOOD"
+        },
+        {
+            "labelEn" : "Dimension Inspection",
+            "label" : "寸法調査",
+            "value1" : "GOOD"
+        },
+        {
+            "labelEn" : "Hert Treatment Condition & Temperature",
+            "label" : "熱処理温度",
+            "value1" : "NORMARIZING",
+            "value2" : "880℃ A.C"
+        },
+        {
+
+        },
+        {
+            "labelEn" : "Hert Treatment Number",
+            "label" : "熱処理番号",
+            "value1" : "2014-8-26-3"
+        },
+        {
+            "labelEn" : "Liuid Penetrant Examination",
+            "label" : "浸透探傷試験",
+            "value1" : "-"
+        },
+        {
+            "labelEn" : "Ultrasonic Examination",
+            "label" : "超音波探傷試験",
+            "value1" : "-"
+        },
+        {
+            "value1" : "-"
+        },
+        {
+            "labelEn" : "Size of Specimen",
+            "label" : "試験片 形状",
+            "value1" : "JIS Z2241 14A号"
+        }
+    ],
+    "remarks" : "remarks-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "chiefOdInspectionSection" : "ラトナ太郎"
+}
