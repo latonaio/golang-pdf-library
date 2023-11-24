@@ -5,10 +5,10 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"os"
-	lncommon "pdf/components/common"
 	"time"
 
 	pdfsign "github.com/digitorus/pdfsign/sign"
+	lncommon "github.com/latonaio/golang-pdf-library/components/common"
 )
 
 func Sign(pdfPath *string, privateKeyPath *string, certificatePath *string, chainPath *string, signingInfo *SigningInfo) {

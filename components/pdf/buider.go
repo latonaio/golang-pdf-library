@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
-	model "pdf/model/pdf/template"
 	"strings"
 
+	model "github.com/latonaio/golang-pdf-library/model/pdf/template"
 	"github.com/signintech/gopdf"
 )
 

@@ -1,8 +1,6 @@
 package lnpdf
 
-import (
-	model "pdf/model/pdf/template"
-)
+import model "github.com/latonaio/golang-pdf-library/model/pdf/template"
 
 /*
 	FontFamily          string

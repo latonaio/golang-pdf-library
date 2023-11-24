@@ -2,10 +2,10 @@ package lnpdf
 
 import (
 	"math"
-	lncommon "pdf/components/common"
-	"pdf/components/rgb"
 	"strings"
 
+	lncommon "github.com/latonaio/golang-pdf-library/components/common"
+	"github.com/latonaio/golang-pdf-library/components/rgb"
 	"github.com/signintech/gopdf"
 )
 
