@@ -4,8 +4,6 @@ import (
 	"math"
 	"strings"
 
-	constant "github.com/latonaio/golang-pdf-library/pkg/lnpdf/constants"
-
 	"github.com/signintech/gopdf"
 )
 
@@ -204,24 +202,24 @@ func (this *Pdf) GetPaperSize(paperSize *string, orientation *string) *gopdf.Rec
 	var goRect gopdf.Rect
 	if false {
 		// nop
-	} else if *paperSize == string(constant.A1) {
+	} else if *paperSize == string(A1) {
 		goRect = *gopdf.PageSizeA1
-	} else if *paperSize == string(constant.A2) {
+	} else if *paperSize == string(A2) {
 		goRect = *gopdf.PageSizeA2
-	} else if *paperSize == string(constant.A3) {
+	} else if *paperSize == string(A3) {
 		goRect = *gopdf.PageSizeA3
-	} else if *paperSize == string(constant.A5) {
+	} else if *paperSize == string(A5) {
 		goRect = *gopdf.PageSizeA5
-	} else if *paperSize == string(constant.B4) {
+	} else if *paperSize == string(B4) {
 		goRect = *gopdf.PageSizeB4
-	} else if *paperSize == string(constant.B5) {
+	} else if *paperSize == string(B5) {
 		goRect = *gopdf.PageSizeB5
 	} else {
 		goRect = *gopdf.PageSizeA4
 	}
 
 	// portlait -> landscape
-	if *orientation == string(constant.Landscape) {
+	if *orientation == string(Landscape) {
 		goRect = gopdf.Rect{W: goRect.H, H: goRect.W}
 	}
 

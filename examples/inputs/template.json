@@ -4,7 +4,7 @@
     "size" : "A4",
     "image" : "layout.pdf",
     "fonts" : {
-        "default" : "./pkg/lnpdf/resources/ipaexm.ttf",
+        "default" : "./resources/ipaexm.ttf",
         "signature": "zatsu.ttf"
     },
     "styles" : {

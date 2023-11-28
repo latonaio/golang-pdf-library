@@ -6,8 +6,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	model "github.com/latonaio/golang-pdf-library/pkg/lnpdf/models"
-
 	"github.com/signintech/gopdf"
 )
 
@@ -21,7 +19,7 @@ type Builder struct {
 
 func (this Builder) Build() *Pdf {
 	// load template json
-	template := model.Pdf{}
+	template := PdfEntity{}
 	template.FromFile(&this.TemplatePath)
 
 	// load data json
@@ -159,7 +157,7 @@ func (this Builder) Build() *Pdf {
 	// fill sample record text
 	{
 		// director
-		nextRecord := func(offset *gopdf.Point, field *model.Field) bool {
+		nextRecord := func(offset *gopdf.Point, field *FieldEntity) bool {
 			if field.Record.Direction == "x" {
 				offset.X += field.Record.Size[0]
 				if field.Rect[2] >= offset.X+field.Record.Size[0] {

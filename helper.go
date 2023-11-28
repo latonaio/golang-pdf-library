@@ -1,7 +1,5 @@
 package lnpdf
 
-import model "github.com/latonaio/golang-pdf-library/pkg/lnpdf/models"
-
 /*
 	FontFamily          string
 	FontStyle           string
@@ -19,7 +17,7 @@ import model "github.com/latonaio/golang-pdf-library/pkg/lnpdf/models"
 
 */
 
-func (this *Pdf) AddStyles(styles *map[string]model.Style) {
+func (this *Pdf) AddStyles(styles *map[string]StyleEntity) {
 	(*this).Styles = &map[string]Style{}
 
 	// 全ての model.styles を pdf.styles に追加
@@ -37,7 +35,7 @@ func (this *Pdf) AddStyles(styles *map[string]model.Style) {
 	}
 }
 
-func getStyleRoute(route *[]string, style *model.Style, styles *map[string]model.Style) *[]string {
+func getStyleRoute(route *[]string, style *StyleEntity, styles *map[string]StyleEntity) *[]string {
 	if style.Style == nil {
 		return route
 	}
@@ -50,7 +48,7 @@ func getStyleRoute(route *[]string, style *model.Style, styles *map[string]model
 	return getStyleRoute(&newRoute, &baseStyle, styles)
 }
 
-func (this *Style) mergeStyle(m *model.Style) {
+func (this *Style) mergeStyle(m *StyleEntity) {
 	if m.FontFamily != nil {
 		this.FontFamily = *m.FontFamily
 	}

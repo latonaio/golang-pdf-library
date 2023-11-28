@@ -7,8 +7,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/latonaio/golang-pdf-library/pkg/lnpdf/utils"
-
 	pdfsign "github.com/digitorus/pdfsign/sign"
 )
 
@@ -66,7 +64,7 @@ func Sign(pdfPath *string, privateKeyPath *string, certificatePath *string, chai
 	}
 
 	tempPath := *pdfPath + "_"
-	utils.Copy(pdfPath, &tempPath)
+	Copy(pdfPath, &tempPath)
 	defer os.Remove(tempPath)
 
 	err = pdfsign.SignFile(*pdfPath, tempPath, pdfsign.SignData{
@@ -93,7 +91,7 @@ func Sign(pdfPath *string, privateKeyPath *string, certificatePath *string, chai
 		panic(err)
 	}
 
-	utils.Copy(&tempPath, pdfPath)
+	Copy(&tempPath, pdfPath)
 }
 
 type SigningInfo struct {
