@@ -256,7 +256,18 @@ func (this Builder) Build() *Pdf {
 
 						val := d.(map[string]interface{})[f.DataSource]
 						if val != nil {
-							value := val.(string)
+							var value string
+
+							switch v := val.(type) {
+							case float32:
+								value = fmt.Sprintf("%v", v)
+							case float64:
+								value = fmt.Sprintf("%v", v)
+							case string:
+								value = v
+							default:
+								log.Printf("Unexpected type: %T\n", val)
+							}
 							pdf.DrawText(&rect, &f.Style, &value)
 						}
 					}
