@@ -2,6 +2,8 @@ package lnpdf
 
 import (
 	"encoding/json"
+	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -137,7 +139,18 @@ func (this Builder) Build() *Pdf {
 			drawText = func(rect *Rect, dataSource *string, styleName *string) {
 				val := data.(map[string]interface{})[*dataSource]
 				if val != nil {
-					value := val.(string)
+					var value string
+
+					switch v := val.(type) {
+					case float64:
+						value = fmt.Sprintf("%v", v)
+					case string:
+						value = v
+					default:
+						log.Printf("Unexpected type: %T\n", val)
+						return
+					}
+
 					pdf.DrawText(rect, styleName, &value)
 				}
 			}
