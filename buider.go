@@ -142,6 +142,8 @@ func (this Builder) Build() *Pdf {
 					var value string
 
 					switch v := val.(type) {
+					case float32:
+						value = fmt.Sprintf("%v", v)
 					case float64:
 						value = fmt.Sprintf("%v", v)
 					case string:
