@@ -1,9 +1,5 @@
 # README #
 
-## TODO
-- apply godoc
-- path ../
-
 ## Specifications
 
 - data.jsonの値は文字列のみ(数値は不可、フォーマットした文字列)
@@ -39,7 +35,7 @@ s{
     "version" : "1.0",                              // pdf module version
     "orientation" : "landscape",                    // [landscape|portlait]
     "size" : "A4",                                  // size
-    "image" : "millcert.pdf",                       // background image pdf
+    "image" : "millsheet.pdf",                       // background image pdf
     "styles" : {                                    // define styles 
         "default" : {                               // default style
             "fontFamily" : "xxxxx",             

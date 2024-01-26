@@ -1,0 +1,307 @@
+{
+    "version" : "1.0",
+    "orientation" : "landscape",
+    "size" : "A4",
+    "image" : "layout.pdf",
+    "fonts" : {
+        "default" : "./pkg/lnpdf/resources/ipaexm.ttf",
+        "signature": "zatsu.ttf"
+    },
+    "styles" : {
+        "default" : {
+            "fontFamily" : "default",
+            "fontSize" : 9,
+            "color" : "#000000",
+            "underline" : false,
+            "overflow" : "crop",
+            "horizontalAlignment" : "left",
+            "verticalAlignment" : "bottom"
+        },
+        "default-numeric" : {
+            "style" : "default",
+            "horizontalAlignment" : "right"
+        },
+        "cell" : {
+            "style" : "default",
+            "horizontalAlignment" : "center",
+            "verticalAlignment" : "center"
+        },
+        "cell-small" : {
+            "style" : "cell",
+            "fontSize" : 6
+        },
+        "remarks" : {
+            "style" : "default",
+            "horizontalAlignment" : "left",
+            "verticalAlignment" : "top",
+            "multiline" : true
+        },
+        "signature" : {
+            "style" : "default",
+            "fontFamily" : "signature",
+            "fontSize" : 24,
+            "horizontalAlignment" : "center"
+        }
+    },
+    "fields" : [
+        {
+            "dataSource" : "customer",
+            "style" : "default",
+            "rect" : [
+                180, 100, 220, 12
+            ]
+        },
+        {
+            "dataSource" : "orderNo",
+            "style" : "default",
+            "rect" : [
+                180, 115, 220, 12
+            ]
+        },
+        {
+            "dataSource" : "drawingNo",
+            "style" : "default",
+            "rect" : [
+                180, 130, 220, 12
+            ]
+        },
+        {
+            "dataSource" : "purchaceOrderNo",
+            "style" : "default",
+            "rect" : [
+                220, 160, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "mfgNo",
+            "style" : "default",
+            "rect" : [
+                220, 175, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "markingOfMaterial",
+            "style" : "default",
+            "rect" : [
+                220, 190, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "product",
+            "style" : "default",
+            "rect" : [
+                220, 205, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "size",
+            "style" : "default",
+            "rect" : [
+                220, 220, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "quantity",
+            "style" : "default",
+            "rect" : [
+                220, 235, 180, 12
+            ]
+        },
+        {
+            "dataSource" : "certificateNo",
+            "style" : "default",
+            "rect" : [
+                630, 100, 160, 12
+            ]
+        },
+        {
+            "dataSource" : "date",
+            "style" : "default",
+            "rect" : [
+                630, 115, 160, 12
+            ]
+        },
+        {
+            "dataSource" : "specificationForInspection",
+            "style" : "default",
+            "rect" : [
+                640, 205, 150, 12
+            ]
+        },
+        {
+            "dataSource" : "standardOfRawMaterial",
+            "style" : "default",
+            "rect" : [
+                640, 220, 150, 12
+            ]
+        },
+        {
+            "dataSource" : "rawMaterialMaker",
+            "style" : "default",
+            "rect" : [
+                625, 235, 165, 12
+            ]
+        },
+        {
+            "dataSource" : "heatNo",
+            "style" : "default",
+            "rect" : [
+                60, 370, 75, 10
+            ]
+        },
+        {
+            "dataSource" : "mechanicalProperties",
+            "rect" : [
+                140, 278, 263, 105
+            ],
+            "record" : {
+                "direction" : "x",
+                "size" : [
+                    52.6, 105
+                ],
+                "fields" : [
+                    {
+                        "dataSource" : "labelEn",
+                        "style" : "cell-small",
+                        "rect" : [
+                            0, 0, 52.6, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "label",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 15, 52.6, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "unit",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 30, 52.6, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "max",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 45, 52.6, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "min",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 60, 52.6, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "heatNo",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 75, 52.6, 30
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "dataSource" : "chemicalCompositions",
+            "rect" : [
+                403, 278, 385, 105
+            ],
+            "record" : {
+                "direction" : "x",
+                "size" : [
+                    35, 105
+                ],
+                "fields" : [
+                    {
+                        "dataSource" : "label",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 0, 35, 45
+                        ]
+                    },
+                    {
+                        "dataSource" : "max",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 45, 35, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "min",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 60, 35, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "heatNo",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 75, 35, 30
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "dataSource" : "specifications",
+            "rect" : [
+                53, 383, 490, 150
+            ],
+            "record" : {
+                "direction" : "y",
+                "size" : [
+                    245, 30
+                ],
+                "fields" : [
+                    {
+                        "dataSource" : "labelEn",
+                        "style" : "cell-small",
+                        "rect" : [
+                            0, 0, 122.5, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "label",
+                        "style" : "cell",
+                        "rect" : [
+                            0, 15, 122.5, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "value1",
+                        "style" : "cell",
+                        "rect" : [
+                            122.5, 0, 122.5, 15
+                        ]
+                    },
+                    {
+                        "dataSource" : "value2",
+                        "style" : "cell",
+                        "rect" : [
+                            122.5, 15, 122.5, 15
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "dataSource" : "remarks",
+            "style" : "remarks",
+            "rect" : [
+                545, 400, 240, 40
+            ]
+        },
+        {
+            "dataSource" : "chiefOdInspectionSection",
+            "style" : "signature",
+            "rect" : [
+                550, 490, 230, 25
+            ]
+        }
+    ]
+}
