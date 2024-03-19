@@ -1,11 +1,10 @@
-package signer
+package lnpdf
 
 import (
 	"crypto"
 	"crypto/x509"
 	"encoding/pem"
 	"os"
-	lncommon "pdf/components/common"
 	"time"
 
 	pdfsign "github.com/digitorus/pdfsign/sign"
@@ -65,7 +64,7 @@ func Sign(pdfPath *string, privateKeyPath *string, certificatePath *string, chai
 	}
 
 	tempPath := *pdfPath + "_"
-	lncommon.Copy(pdfPath, &tempPath)
+	Copy(pdfPath, &tempPath)
 	defer os.Remove(tempPath)
 
 	err = pdfsign.SignFile(*pdfPath, tempPath, pdfsign.SignData{
@@ -92,7 +91,7 @@ func Sign(pdfPath *string, privateKeyPath *string, certificatePath *string, chai
 		panic(err)
 	}
 
-	lncommon.Copy(&tempPath, pdfPath)
+	Copy(&tempPath, pdfPath)
 }
 
 type SigningInfo struct {

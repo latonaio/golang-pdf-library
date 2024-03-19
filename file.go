@@ -1,4 +1,4 @@
-package lncommon
+package lnpdf
 
 import (
 	"os"

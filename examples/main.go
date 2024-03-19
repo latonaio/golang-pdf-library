@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"latona-pdf/pkg/lnpdf"
-	"latona-pdf/pkg/lnpdf/utils"
+
+	lnpdf "github.com/latonaio/golang-pdf-library"
 )
 
 func main() {
@@ -34,20 +34,20 @@ func main() {
 	}
 
 	// set resource path
-	templatePath := utils.ToPath(&templateName)
-	dataSourcePath := utils.ToPath(&dataSourceName)
-	outputPdfPath := utils.ToPath(&outputPdfName)
+	templatePath := lnpdf.ToPath(&templateName)
+	dataSourcePath := lnpdf.ToPath(&dataSourceName)
+	outputPdfPath := lnpdf.ToPath(&outputPdfName)
 	var privateKeyPath string
 	if privateKeyName != "" {
-		privateKeyPath = utils.ToPath(&privateKeyName)
+		privateKeyPath = lnpdf.ToPath(&privateKeyName)
 	}
 	var certificatePath string
 	if certificateName != "" {
-		certificatePath = utils.ToPath(&certificateName)
+		certificatePath = lnpdf.ToPath(&certificateName)
 	}
 	var chainPath string
 	if chainName != "" {
-		chainPath = utils.ToPath(&chainName)
+		chainPath = lnpdf.ToPath(&chainName)
 	}
 
 	// build

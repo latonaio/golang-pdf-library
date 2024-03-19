@@ -1,4 +1,4 @@
-module latona-pdf
+module github.com/latonaio/golang-pdf-library
 
 go 1.20
 

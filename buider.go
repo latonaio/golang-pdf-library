@@ -2,9 +2,10 @@ package lnpdf
 
 import (
 	"encoding/json"
+	"fmt"
+	"log"
 	"os"
 	"path/filepath"
-	model "pdf/model/pdf/template"
 	"strings"
 
 	"github.com/signintech/gopdf"
@@ -20,7 +21,7 @@ type Builder struct {
 
 func (this Builder) Build() *Pdf {
 	// load template json
-	template := model.Pdf{}
+	template := PdfEntity{}
 	template.FromFile(&this.TemplatePath)
 
 	// load data json
@@ -138,7 +139,20 @@ func (this Builder) Build() *Pdf {
 			drawText = func(rect *Rect, dataSource *string, styleName *string) {
 				val := data.(map[string]interface{})[*dataSource]
 				if val != nil {
-					value := val.(string)
+					var value string
+
+					switch v := val.(type) {
+					case float32:
+						value = fmt.Sprintf("%v", v)
+					case float64:
+						value = fmt.Sprintf("%v", v)
+					case string:
+						value = v
+					default:
+						log.Printf("Unexpected type: %T\n", val)
+						return
+					}
+
 					pdf.DrawText(rect, styleName, &value)
 				}
 			}
@@ -158,7 +172,7 @@ func (this Builder) Build() *Pdf {
 	// fill sample record text
 	{
 		// director
-		nextRecord := func(offset *gopdf.Point, field *model.Field) bool {
+		nextRecord := func(offset *gopdf.Point, field *FieldEntity) bool {
 			if field.Record.Direction == "x" {
 				offset.X += field.Record.Size[0]
 				if field.Rect[2] >= offset.X+field.Record.Size[0] {
@@ -242,7 +256,18 @@ func (this Builder) Build() *Pdf {
 
 						val := d.(map[string]interface{})[f.DataSource]
 						if val != nil {
-							value := val.(string)
+							var value string
+
+							switch v := val.(type) {
+							case float32:
+								value = fmt.Sprintf("%v", v)
+							case float64:
+								value = fmt.Sprintf("%v", v)
+							case string:
+								value = v
+							default:
+								log.Printf("Unexpected type: %T\n", val)
+							}
 							pdf.DrawText(&rect, &f.Style, &value)
 						}
 					}

@@ -1,11 +1,11 @@
-package model
+package lnpdf
 
 import (
 	"encoding/json"
 	"os"
 )
 
-func (this *Pdf) FromFile(path *string) {
+func (this *PdfEntity) FromFile(path *string) {
 	file, err := os.ReadFile(*path)
 	if err != nil {
 		panic(err)

@@ -1,4 +1,4 @@
-package lncommon
+package lnpdf
 
 type TypePaperSize string
 
@@ -13,11 +13,4 @@ const (
 	//	B3 = TypePaperSize("B3")
 	B4 = TypePaperSize("B4")
 	B5 = TypePaperSize("B5")
-)
-
-type TypeOrientation string
-
-const (
-	Portlait  = TypeOrientation("portlait")
-	Landscape = TypeOrientation("landscape")
 )
